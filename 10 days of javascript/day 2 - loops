@@ -1,0 +1,27 @@
+function vowelsAndConsonants(s) {
+    const vowels = 'aeiou';
+    var consonants = '';
+    
+    for(var i = 0; i < s.length; i++) {
+       if (vowels.includes(s[i])) {
+           console.log(s[i]);
+       }
+       else {
+           consonants += s[i] + '\n';
+       }
+    }
+    
+    console.log(consonants.trim());
+}
+
+//Includes
+//-----------
+//The includes() method determines whether a string contains the characters of a specified string.
+//This method returns true if the string contains the characters, and false if not.
+       
+
+//Trim
+//-----
+//The trim() method removes whitespace from both sides of a string.
+//Note: The trim() method does not change the original string.
+
