@@ -1,0 +1,46 @@
+function getCount(objects) {
+    var ctr = 0;
+    for(var i=0; i<objects.length; i++){
+      if(objects[i].x == objects[i].y) {
+        ctr++;
+      }
+    }
+    return ctr;
+}
+
+/*
+function getCount(objects) {
+    return objects.filter(function(o){return o.x==o.y}).length
+}
+*/
+
+
+/*
+function getCount(objects) {
+    let counts = 0; 
+ 
+    // iterate over array of objects
+    objects.map((item) => {
+        if (item.x === item.y) {
+            counts++;
+        }
+        return item;
+    });
+    return counts;
+}
+*/
+
+
+
+/* 
+Filter keyword
+---------------
+
+function isBigEnough(value) {
+  return value >= 10
+}
+
+let filtered = [12, 5, 8, 130, 44].filter(isBigEnough)
+// filtered is [12, 130, 44]
+
+*/
