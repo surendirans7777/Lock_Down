@@ -1,0 +1,46 @@
+class Polygon {
+    constructor(sides) {
+        this.sides = sides;
+    }
+    perimeter() {
+        var sum = 0;
+        for(var i=0;i< this.sides.length; i++){
+            sum = sum + this.sides[i];
+        }
+        return sum;
+    }
+}
+
+
+
+
+/*
+Reduce keyword:
+---------------
+The reduce() method reduces the array to a single value.
+
+The reduce() method executes a provided function for each value of the array (from left-to-right).
+
+The return value of the function is stored in an accumulator (result/total).
+
+Note: reduce() does not execute the function for array elements without values.
+
+Note: this method does not change the original array.
+
+Refer:
+-------
+https://www.youtube.com/watch?v=BNPdTVkaUgk
+
+
+class Polygon {
+    constructor(arr) {
+        this.arr = arr;
+    }
+    perimeter () {
+        return this.arr.reduce((prev, next) => prev + next);
+    }
+}
+
+
+
+
