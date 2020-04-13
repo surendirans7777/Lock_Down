@@ -43,4 +43,18 @@ function isBigEnough(value) {
 let filtered = [12, 5, 8, 130, 44].filter(isBigEnough)
 // filtered is [12, 130, 44]
 
+
+
+
+
+Map keyword
+-----------
+Definition and Usage
+The map() method creates a new array with the results of calling a function for every array element.
+
+The map() method calls the provided function once for each element in an array, in order.
+
+Note: map() does not execute the function for array elements without values.
+
+Note: this method does not change the original array.
 */
