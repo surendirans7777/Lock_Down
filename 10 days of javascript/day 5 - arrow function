@@ -1,0 +1,6 @@
+//https://www.hackerrank.com/challenges/js10-arrows/topics/javascript-arrow-functions
+
+
+function modifyArray(nums) {
+  return nums.map((i) => (i % 2 === 0) ? i * 2 : i * 3);   
+}
