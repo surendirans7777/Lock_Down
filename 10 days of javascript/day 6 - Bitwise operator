@@ -1,0 +1,45 @@
+function getMaxLessThanK(n, k) {
+let maxAnd=0;
+ for (let i=1; i<=n; i++) 
+    {
+        for (let j=i+1; j<=n; j++) 
+        {
+            if (((i&j) > maxAnd) && ((i&j) < k)) 
+            {
+                maxAnd = i&j;
+            }
+        }
+    }
+return maxAnd;
+}
+
+
+
+
+
+/*
+Solution for AND , OR, XOR in c++ solution for reference
+
+void calculate_the_maximum(int n, int k) {
+int maxAnd = 0;
+    int maxOr = 0;
+    int maxXor = 0;
+
+    for (int i=1; i<=n; i++) {
+        for (int j=i+1; j<=n; j++) {
+            if (((i&j) > maxAnd) && ((i&j) < k)) {
+                maxAnd = i&j;
+            }
+            if (((i|j) > maxOr) && ((i|j) < k)) {
+                maxOr = i|j;
+            }
+            if (((i^j) > maxXor) && ((i^j) < k)) {
+                maxXor = i^j;
+            }
+        }
+    }
+
+    printf("%d\n%d\n%d\n", maxAnd, maxOr, maxXor);
+}
+
+*/
