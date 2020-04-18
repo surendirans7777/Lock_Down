@@ -1,0 +1,6 @@
+function regexVar() {
+//let re = /^([aeiou]).+\1$/;
+//or below solution
+let re = new RegExp(/\b(a|e|i|o|u)[a-z]{2,}\1\b/);
+    return re;
+}
