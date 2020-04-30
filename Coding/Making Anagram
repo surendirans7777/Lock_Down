@@ -1,0 +1,31 @@
+function makingAnagrams(s1, s2){
+    var letters = Array.apply(null, new Array(26)).map(Number.prototype.valueOf,0);
+    //Creating an array of 26 with value assigned 0 // Why 26 because of 26 alphabets
+    
+    assignWeight(letters,s1,1);
+    //Assigning value 1 to the array[26] for the character present in S1
+    
+    assignWeight(letters,s2,-1);
+    //Assigning value -1 to the array[26] for the character present in S2
+    
+    
+    
+    
+    var solution = letters.reduce(function(total, num){
+        return Math.abs(total) + Math.abs(num);
+    });
+//reduce will get final value, Math.abs is used to get the absolute value.
+
+    return solution;
+}
+
+
+function assignWeight(letters, word, weigth) {
+    var charCode;
+    for (var i = 0;i < word.length; i++){
+        charCode =  word.charCodeAt(i) - 97;
+        //Here charCode will hold the value of the index of English alphapets 
+        
+        letters[charCode] += weigth;
+    }
+}
