@@ -1,0 +1,23 @@
+//https://www.geeksforgeeks.org/javascript-tostring-function/
+//https://www.youtube.com/watch?v=zhu605v9KOI
+
+//JavaScript Solution
+
+
+const processData = input => {
+    const num = parseInt(input);
+    const binary = num.toString(2);
+    let zeroes = 0;
+    for(let i = 0; i < binary.length; i++) {
+        if(binary[i] === '0') {
+            zeroes++;
+        }
+    }
+    if(num === 0) {
+        zeroes = 0;
+    }
+    const result = Math.pow(2, zeroes);
+    console.log(result);
+};
+
+
