@@ -1,0 +1,11 @@
+Download the index.js
+
+Install pupeteer:
+----------------
+npm i pupeteer
+
+
+
+How to use:
+------------
+node index.js https://website.com
